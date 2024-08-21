@@ -1,0 +1,115 @@
+* {
+    font-family: Young, Outfit Serif;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+
+    --stone-100: hsl(30, 54%, 90%);
+
+    --stone-150: hsl(30, 18%, 87%);
+
+    --stone-600: hsl(30, 10%, 34%);
+
+    --stone-900: hsl(24, 5%, 18%);
+
+    --brown-800: hsl(14, 45%, 36%);
+
+    --rose-800: hsl(332, 51%, 32%);
+
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+.wrapper {
+    min-height: 100vh;
+    min-width: 320px;
+    max-width: 375px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+p,
+li {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--stone-600);
+}
+
+li {
+    text-indent: 20px;
+    margin: 10px 0;
+}
+
+h1 {
+    font-family: Outfit;
+    font-weight: 700;
+    color: var(--stone-900);
+}
+
+h2 {
+    color: var(--brown-800);
+    font-weight: 600;
+}
+
+h3 {
+    color: var(--rose-800);
+    padding: 10px;
+}
+
+
+header div {
+    background: var(--rose-50);
+}
+
+div li::marker {
+    color: var(--rose-800);
+}
+
+.value,
+li::marker {
+    color: var(--brown-800);
+}
+
+ol li::marker,
+.value {
+    font-weight: 600;
+}
+
+span {
+    color: var(--stone-600);
+    font-weight: 600;
+}
+
+.nutrition-description {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-color: var(--stone-100);
+        padding: 50px;
+    }
+
+    main {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    .value {
+        padding-right: 40px;
+    }
+
+}
