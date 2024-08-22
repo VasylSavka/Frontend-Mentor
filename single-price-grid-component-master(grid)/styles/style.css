@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --CyanPrimary: hsl(179, 62%, 43%);
+    --BrightYellowPrimary: hsl(71, 73%, 54%);
+    --LightGrayNeutral: hsl(204, 43%, 93%);
+    --GrayishBlueNeutral: hsl(218, 22%, 67%);
+    --Primary: hsl(228, 45%, 44%);
+}
+
+/* Mobile: 375px
+min: 320px
+Desktop: 1440px */
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+}
+
+.wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.article {
+    display: grid;
+    grid-template-columns: repeat(2, 284px);
+    grid-auto-rows: minmax(150px, auto);
+    height: 340px;
+    box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, .1);
+    justify-content: center;
+    grid-template-areas:
+        "join-us join-us"
+        "subscription why-us";
+
+}
+
+.article-join-us {
+    grid-area: join-us;
+    padding: 20px;
+}
+
+.article-join-us-title {
+    color: var(--CyanPrimary);
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.article-join-us-title+p {
+    color: var(--BrightYellowPrimary);
+    font-weight: 700;
+    margin: 20px 0 10px;
+}
+
+.article-join-us p:nth-of-type(2) {
+    color: var(--GrayishBlueNeutral);
+}
+
+.article-subscription {
+    grid-area: subscription;
+    background-color: var(--CyanPrimary);
+    color: rgba(255, 255, 255, .8);
+    padding: 30px;
+}
+
+.subsription-title,
+.article-why-us-title {
+    margin-bottom: 10px;
+}
+
+.article-subscription span {
+    font-size: 24px;
+    color: white;
+}
+
+.article-subscription span::after {
+    content: " per month";
+    color: var(--LightGrayNeutral);
+    opacity: .4;
+    font-size: 11px;
+    margin-left: 10px;
+}
+
+.article-subscription p:nth-of-type(2) {
+    margin: 10px 0;
+    font-size: 13px;
+}
+
+.article-subscription button {
+    background-color: var(--BrightYellowPrimary);
+    padding: 10px 0;
+    width: 100%;
+    color: white;
+    border: 1px solid var(--GrayishBlueNeutral);
+    border-radius: 3px;
+}
+
+
+.article-why-us {
+    grid-area: why-us;
+    background-color: var(--CyanPrimary);
+    opacity: .8;
+    padding: 30px;
+}
+
+.article-why-us-title {
+    color: white;
+    opacity: .8;
+}
+
+.article-why-us p:nth-of-type(2) {
+    color: white;
+    opacity: .6;
+    font-size: 11px;
+    width: 59%;
+    margin-top: 17px;
+}
+
+@media screen and (max-width: 1440px) {
+    .article {
+        grid-template-columns: 284px;
+        height: 600px;
+        grid-template-areas:
+            "join-us"
+            "subscription"
+            "why-us";
+
+    }
+}
